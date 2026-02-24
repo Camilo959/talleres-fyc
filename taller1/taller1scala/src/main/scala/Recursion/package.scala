@@ -6,15 +6,11 @@ package object Recursion {
   def potencia(m: Int, n:Int): Int = {
 
     def suma(m: Int, n:Int): Int = {
-      if (n == 0) m
-      else if (n > 0) suma(m + 1, n - 1)
-      else suma(m - 1, n + 1)
+      m + n
     }
 
     def multiplicacion(m: Int, n:Int): Int = {
-      if (n == 0) 0
-      else if (n > 0) suma(multiplicacion(m, n - 1), m)
-      else -multiplicacion(m, -n)
+      m * n
     }
 
     def potenciaCal(base: Int, exponente: Int): Int = {
