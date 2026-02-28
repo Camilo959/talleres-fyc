@@ -4,20 +4,8 @@ package object Recursion {
    *  Ejercicio 1
    */
   def potencia(m: Int, n:Int): Int = {
-
-    def suma(m: Int, n:Int): Int = {
-      m + n
-    }
-
-    def multiplicacion(m: Int, n:Int): Int = {
-      m * n
-    }
-
-    def potenciaCal(base: Int, exponente: Int): Int = {
-      if (exponente == 0) 1
-      else  multiplicacion(potenciaCal(base, exponente - 1), base)
-    }
-    potenciaCal(m,n)
+    if (n == 0) 1
+    else m * potencia(m, n - 1)
   }
 
 
