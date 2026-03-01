@@ -48,7 +48,7 @@ cambioMonedas(300, List(5, 10, 20, 50, 100, 200, 500))
 assert (cambioMonedas(300, List(5, 10, 20, 50, 100, 200, 500)) == 1022)
 
 cambioMonedas(301, List(5, 10, 20, 50, 100, 200, 500))
-assert (cambioMonedas(300, List(5, 10, 20, 50, 100, 200, 500)) == 0)
+assert (cambioMonedas(301, List(5, 10, 20, 50, 100, 200, 500)) == 0)
 
 cambioMonedas(300, List(500, 5, 50, 100, 20, 200, 10))
 assert (cambioMonedas(300, List(500, 5, 50, 100, 20, 200, 10)) == 1022)
