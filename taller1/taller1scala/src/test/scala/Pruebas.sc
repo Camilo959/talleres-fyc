@@ -41,14 +41,26 @@ balanceado("(solo un) ejemplo".toList)
 balanceado("".toList)
 
 // Pruebas Cambio de monedas
+cambioMonedas(0, List(1,2,5))
+assert(cambioMonedas(0, List(1,2,5)) == 1)      // Solo hay una forma de dar 0 pesos
+
+cambioMonedas(5, List())
+assert(cambioMonedas(5, List()) == 0)          // No hay monedas disponibles, no se puede formar 5
+
+cambioMonedas(-3, List(1,2))
+assert(cambioMonedas(-3, List(1,2)) == 0)     // Cantidad negativa, no se puede formar
+
 cambioMonedas(4, List(1,2))
-assert (cambioMonedas(4, List(1,2)) == 3)
+assert(cambioMonedas(4, List(1,2)) == 3)      // 4 = 1+1+1+1, 2+2, 2+1+1
 
-cambioMonedas(300, List(5, 10, 20, 50, 100, 200, 500))
-assert (cambioMonedas(300, List(5, 10, 20, 50, 100, 200, 500)) == 1022)
+cambioMonedas(5, List(2))
+assert(cambioMonedas(5, List(2)) == 0)        // No se puede formar 5 con solo monedas de 2
 
-cambioMonedas(301, List(5, 10, 20, 50, 100, 200, 500))
-assert (cambioMonedas(300, List(5, 10, 20, 50, 100, 200, 500)) == 0)
+cambioMonedas(300, List(5,10,20,50,100,200,500))
+assert(cambioMonedas(300, List(5,10,20,50,100,200,500)) == 1022)  // Ejemplo grande del enunciado
 
-cambioMonedas(300, List(500, 5, 50, 100, 20, 200, 10))
-assert (cambioMonedas(300, List(500, 5, 50, 100, 20, 200, 10)) == 1022)
+cambioMonedas(301, List(5,10,20,50,100,200,500))
+assert(cambioMonedas(301, List(5,10,20,50,100,200,500)) == 0)     // No se puede formar 301 con esas monedas
+
+cambioMonedas(100, List(50,25,10,5,1))
+assert(cambioMonedas(100, List(50,25,10,5,1)) == 292)
