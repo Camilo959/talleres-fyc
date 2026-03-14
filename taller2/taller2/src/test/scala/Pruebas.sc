@@ -62,7 +62,7 @@ g2(100)    // esperado: ≈ 0.8171
 
 g3(30)     // esperado: ≈ 0.00217
 g3(31)     // esperado: ≈ 0.00287
-g3(300)    // esperado: ≈ 0.443
+g3(300)    // esperado: ≈ 0.4610
 
 
 // -----------------------------
@@ -101,7 +101,7 @@ pertenece(3, mm2_o_ca3)  // esperado: max(0.25, 1.0) = 1.0
 pertenece(8, mm2_o_ca3)  // esperado: max(1.0, ≈0.0099) = 1.0
 pertenece(2, mm2_o_ca3)  // esperado: max(0.0, 0.2) = 0.2
 pertenece(4, mm2_o_ca3)  // esperado: max(0.5, 0.2) = 0.5
-
+pertenece(5, mm2_o_ca3)  // esperado: max(0.75, ≈0.0588) = 0.75
 
 // -----------------------------
 // Intersección
