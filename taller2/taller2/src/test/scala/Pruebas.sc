@@ -102,6 +102,7 @@ pertenece(8, mm2_o_ca3)  // esperado: max(1.0, ≈0.0099) = 1.0
 pertenece(2, mm2_o_ca3)  // esperado: max(0.0, 0.2) = 0.2
 pertenece(4, mm2_o_ca3)  // esperado: max(0.5, 0.2) = 0.5
 pertenece(5, mm2_o_ca3)  // esperado: max(0.75, ≈0.0588) = 0.75
+igualdad(union(mm2, mm2), mm2) // esperado: true
 
 // -----------------------------
 // Intersección
@@ -113,7 +114,7 @@ pertenece(8, mm2_y_ca3)  // esperado: min(1.0, ≈0.0099) ≈ 0.0099
 pertenece(2, mm2_y_ca3)  // esperado: min(0.0, 0.2) = 0.0
 pertenece(4, mm2_y_ca3)  // esperado: min(0.5, 0.2) = 0.2
 pertenece(5, mm2_y_ca3)  // esperado: min(0.75, ≈0.0588) ≈ 0.0588
-
+igualdad(interseccion(mm2, mm2), mm2) // esperado: true
 
 // -----------------------------
 // Inclusión
@@ -122,7 +123,7 @@ inclusion(mm2_y_ca3, mm2_o_ca3)      // esperado: true
 inclusion(mm2, ca3)                  // esperado: false
 inclusion(ca3, mm2)                  // esperado: false
 inclusion(mm2, muchoMayorQue(3, 7))  // esperado: false
-inclusion(muchoMayorQue(3, 7), mm2)  // esperado: false
+inclusion(muchoMayorQue(3, 7), mm2)  // esperado: true
 
 
 // -----------------------------
