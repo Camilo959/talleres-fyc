@@ -14,3 +14,9 @@ mostrar(expr4)
 mostrar(expr5)
 mostrar(expr6)
 
+
+mostrar(derivar(expr6 , Atomo( 'x' )))
+mostrar(derivar(expr2 , Atomo( 'x' )))
+mostrar(derivar(expr2 , Atomo( 'y' )))
+mostrar(derivar(Suma(Atomo( 'k') , Prod(Numero(3.0) , Atomo( 'x' ))) , Atomo( 'x')))
+
