@@ -46,14 +46,20 @@ mostrar(limpiar(derivar(Suma(Atomo('k'), Prod(Numero(3.0), Atomo('x'))), Atomo('
 
 
 
-def buenaAprox (f :Expr, a:Atomo, d:Double):Boolean = {
-  evaluar(f ,a,d) < 0.001
+def buenaAprox(f: Expr, a: Atomo, d: Double): Boolean = {
+  Math.abs(evaluar(f, a, d)) < 0.0001
 }
 
+val e1 = Resta(Prod(Atomo('x'), Atomo('x')), Numero(2.0))
+val e2 = Resta(Prod(Atomo('x'), Atomo('x')), Numero(4.0))
+val e3 = Suma(Resta(Prod(Atomo('x'), Atomo('x')), Numero(4.0)), Prod(Numero(3.0), Atomo('x')))
+val e4 = Resta(Prod(Numero(2.0), Atomo('x')), Numero(10.0))
+val e5 = Logaritmo(Atomo('x'))
+val e6 = Resta(Expo(Atomo('x'), Numero(3.0)), Numero(8.0))
 
-val e1= Resta(Prod(Atomo( 'x'),Atomo( 'x')) , Numero(2.0))
-val e2= Resta(Prod(Atomo( 'x'),Atomo( 'x')) , Numero(4.0))
-val e3 = Suma(Resta(Prod(Atomo( 'x'),Atomo( 'x')) , Numero(4.0)) , Prod(Numero(3.0) ,Atomo( 'x')))
-raizNewton(e1 , Atomo( 'x'), 2.0 , buenaAprox)
-raizNewton(e2 , Atomo( 'x'), 2.0 , buenaAprox)
-raizNewton(e3 , Atomo( 'x'), 2.0 , buenaAprox)
+val r1 = raizNewton(e1, Atomo('x'), 2.0, buenaAprox)
+val r2 = raizNewton(e2, Atomo('x'), 6.0, buenaAprox)
+val r3 = raizNewton(e3, Atomo('x'), 2.0, buenaAprox)
+val r4 = raizNewton(e4, Atomo('x'), 1.0, buenaAprox)
+val r5 = raizNewton(e5, Atomo('x'), 0.5, buenaAprox)
+val r6 = raizNewton(e6, Atomo('x'), 5.0, buenaAprox)
