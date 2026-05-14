@@ -19,7 +19,7 @@ mostrar(derivar(expr6 , Atomo( 'x' )))
 mostrar(derivar(expr2 , Atomo( 'x' )))
 mostrar(derivar(expr2 , Atomo( 'y' )))
 mostrar(derivar(Suma(Atomo( 'k') , Prod(Numero(3.0) , Atomo( 'x' ))) , Atomo( 'x')))
-
+mostrar(derivar(expr4, Atomo('x')))
 
 
 
@@ -41,9 +41,12 @@ evaluar(Expo(expr1 ,expr2) ,Atomo( 'x') , 5.0)
 mostrar(Logaritmo(expr1))
 evaluar(Logaritmo(expr1) ,Atomo( 'x') , 5.0)
 
-limpiar(derivar(Suma(Atomo('k'), Prod(Numero(3.0), Atomo('x'))), Atomo('x')))
 mostrar(limpiar(derivar(Suma(Atomo('k'), Prod(Numero(3.0), Atomo('x'))), Atomo('x'))))
-
+mostrar(limpiar(derivar(Prod(Atomo('x'), Atomo('x')), Atomo('x'))))
+mostrar(limpiar(derivar(Div(Suma(Atomo('x'), Numero(2.0)), Atomo('x')), Atomo('x'))))
+mostrar(limpiar(derivar(Logaritmo(Suma(Atomo('x'), Numero(0.0))), Atomo('x'))))
+mostrar(limpiar(derivar(Suma(Prod(Numero(1.0), Atomo('x')), Numero(0.0)), Atomo('x'))))
+mostrar(limpiar(derivar(Prod(Numero(0.0), Expo(Atomo('x'), Numero(5.0))), Atomo('x'))))
 
 
 def buenaAprox(f: Expr, a: Atomo, d: Double): Boolean = {
