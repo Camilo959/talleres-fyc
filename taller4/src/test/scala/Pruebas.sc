@@ -88,4 +88,5 @@ agrupaciones(3)
 
 agrupaciones(6)
 
+agrupaciones(7)
 // agrupaciones(10)
