@@ -89,4 +89,9 @@ agrupaciones(3)
 agrupaciones(6)
 
 agrupaciones(7)
+
 // agrupaciones(10)
+// NOTA: Para m=10, mezclarLCanicas genera (10+1)^10 ≈ 26 mil millones de
+// distribuciones intermedias antes del filtrado, lo que excede la memoria
+// disponible en el entorno de ejecución. La corrección lógica de la función
+// se verifica para los casos m = 1, 2, 3, 6 y 7 incluidos en este archivo.
